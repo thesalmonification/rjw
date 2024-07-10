@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "./rjwfoundation.org",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
