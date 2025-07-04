@@ -15,7 +15,7 @@
     </div>
 
     <div class="main-content-wrapper">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="images/logo.webp" alt="RJW Foundation Logo" height="40"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,6 +58,9 @@
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <a href="donate.html" class="btn btn-primary btn-lg px-4 gap-3">Donate Today</a>
                 <a href="our-mission.html" class="btn btn-outline-light btn-lg px-4" style="border-color: var(--secondary-color); color: var(--secondary-color);">Learn More</a>
+            </div>
+            <div class="scroll-indicator mt-5">
+                <i class="fas fa-chevron-down fa-2x"></i>
             </div>
         </div>
 
@@ -116,11 +119,21 @@
         const player = new Vimeo.Player(iframe);
         const heroContent = document.querySelector('.hero-content');
         const scholarshipContent = document.querySelector('.scholarship-content');
+        const scrollIndicator = document.querySelector('.scroll-indicator');
 
         player.on('ended', function() {
             heroContent.classList.add('visible');
             heroContent.style.pointerEvents = 'auto'; // Enable clicks
             scholarshipContent.classList.add('visible');
+            document.body.classList.add('scrolling-enabled');
+            scrollIndicator.classList.add('visible');
+        });
+
+        scrollIndicator.addEventListener('click', function() {
+            window.scrollBy({
+                top: window.innerHeight, // Scroll down by the height of the viewport
+                behavior: 'smooth'
+            });
         });
 
         // Remove the scroll event listener as it's no longer needed

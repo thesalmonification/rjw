@@ -15,6 +15,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--light-color);
     color: var(--dark-color);
+    overflow: hidden; /* Disable scrolling by default */
+}
+
+body.scrolling-enabled {
+    overflow: auto; /* Enable scrolling */
 }
 
 h1, h2, h3, h4, h5, h6, .card-title {
@@ -119,6 +124,30 @@ h1, h2, h3, h4, h5, h6, .card-title {
 .hero-content.visible {
     opacity: 1;
     visibility: visible; /* Make content visible and interactive */
+}
+
+.scroll-indicator {
+    color: #fff;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    cursor: pointer; /* Indicate it's clickable */
+    animation: bounce 2s infinite; /* Apply bounce animation */
+}
+
+.scroll-indicator.visible {
+    opacity: 1;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 .scholarship-content {
