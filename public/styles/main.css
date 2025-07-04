@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #007bff; /* A vibrant blue for peace and protection */
+    --secondary-color: #28a745; /* A healing green for nature and growth */
+    --accent-color-1: #ffc107; /* A warm yellow/gold for optimism and vitality */
+    --accent-color-2: #dc3545; /* A strong red for vitality and passion */
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+h1, h2, h3, h4, h5, h6, .card-title {
+    color: var(--primary-color);
+}
+
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--dark-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline-light {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.footer {
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.hero-section {
+    /* This class is no longer used for positioning the video background */
+}
+
+.video-background-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -2; /* Place behind all other content */
+}
+
+.video-background-fixed iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-content-wrapper {
+    position: relative; /* Ensure z-index works relative to this container */
+    z-index: 0; /* Place above the fixed video background */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Occupy full viewport height */
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for better text readability */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    visibility: hidden; /* Initially hide content and prevent interaction */
+}
+
+.hero-content.visible {
+    opacity: 1;
+    visibility: visible; /* Make content visible and interactive */
+}
+
+.navbar {
+    background-color: #fff; /* Ensure opaque background */
+    border-bottom: 1px solid #ddd;
+}
+
+.footer {
+    background-color: var(--dark-color); /* Ensure opaque background */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    color: var(--primary-color);
+}
+
+.team-member-card {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.accordion-button:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+.accordion-button {
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+.accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+.hover-effect-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hover-effect-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.list-unstyled .bi-check-circle-fill {
+    color: var(--primary-color);
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+}
+
+.footer .fab {
+    font-size: 1.5rem;
+}
+
+.content-with-fixed-footer {
+    padding-bottom: 120px; /* Adjust this value based on your footer's actual height */
+}
+
