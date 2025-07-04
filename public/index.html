@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body style="overflow: hidden;">
     <div class="video-background-fixed">
         <iframe src="https://player.vimeo.com/video/695853135?h=5de45005b8&autoplay=1&title=0&portrait=0&byline=0&badge=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
     </div>
@@ -125,7 +125,7 @@
             heroContent.classList.add('visible');
             heroContent.style.pointerEvents = 'auto'; // Enable clicks
             scholarshipContent.classList.add('visible');
-            document.body.classList.add('scrolling-enabled');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
             scrollIndicator.classList.add('visible');
         });
 
