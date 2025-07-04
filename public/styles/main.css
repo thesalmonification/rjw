@@ -3,12 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --primary-color: #007bff; /* A vibrant blue for peace and protection */
-    --secondary-color: #28a745; /* A healing green for nature and growth */
-    --accent-color-1: #ffc107; /* A warm yellow/gold for optimism and vitality */
-    --accent-color-2: #dc3545; /* A strong red for vitality and passion */
-    --light-color: #f8f9fa;
-    --dark-color: #343a40;
+    --primary-color: #20c997; /* A vibrant teal for highlights */
+    --secondary-color: #f8f9fa; /* A soft, light gray for text */
+    --accent-color-1: #fd7e14; /* A warm orange for accents */
+    --accent-color-2: #343a40; /* A dark gray for surfaces */
+    --light-color: #121212; /* A deep, dark background color */
+    --dark-color: #e9ecef; /* A light shade for primary text */
 }
 
 body {
@@ -23,17 +23,17 @@ h1, h2, h3, h4, h5, h6, .card-title {
 
 
 .navbar {
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    background-color: var(--accent-color-2); /* Dark gray for the navbar */
+    border-bottom: 1px solid #444;
 }
 
 .navbar-brand {
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--accent-color-2); /* Light text for the brand */
 }
 
 .nav-link {
-    color: var(--dark-color);
+    color: var(--light-color); /* Light text for nav links */
     transition: color 0.3s ease-in-out;
 }
 
@@ -53,8 +53,8 @@ h1, h2, h3, h4, h5, h6, .card-title {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #1aa87e; /* A darker teal for hover */
+    border-color: #1aa87e;
 }
 
 .btn-outline-light {
@@ -64,18 +64,19 @@ h1, h2, h3, h4, h5, h6, .card-title {
 }
 
 .btn-outline-light:hover {
-    background-color: var(--secondary-color);
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
 }
 
 .footer {
-    background-color: var(--dark-color);
-    color: #fff;
+    background-color: var(--accent-color-2); /* Dark gray for the footer */
+    color: var(--secondary-color); /* Soft gray text */
     padding: 20px 0;
     text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
+    border-top: 1px solid #444;
 }
 
 .hero-section {
@@ -121,7 +122,7 @@ h1, h2, h3, h4, h5, h6, .card-title {
 }
 
 .navbar {
-    background-color: #fff; /* Ensure opaque background */
+    background-color: var(--dark-color); /* Ensure opaque background */
     border-bottom: 1px solid #ddd;
 }
 
@@ -137,7 +138,8 @@ h1, h2, h3, h4, h5, h6, .card-title {
 
 
 .card {
-    border: none;
+    background-color: var(--accent-color-2); /* Dark gray for cards */
+    border: 1px solid #444;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
@@ -167,7 +169,7 @@ h1, h2, h3, h4, h5, h6, .card-title {
 
 .accordion-button {
     color: var(--dark-color);
-    background-color: var(--light-color);
+    background-color: var(--accent-color-2);
 }
 
 .accordion-button::after {
