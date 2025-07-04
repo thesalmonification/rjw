@@ -177,6 +177,8 @@ h1, h2, h3, h4, h5, h6, .card-title {
     border: 1px solid #444;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    position: relative; /* Needed for absolute positioning of overlay */
+    overflow: hidden; /* Hide overflow of overlay */
 }
 
 .card:hover {
@@ -247,3 +249,11 @@ h1, h2, h3, h4, h5, h6, .card-title {
     padding-bottom: 120px; /* Adjust this value based on your footer's actual height */
 }
 
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+}

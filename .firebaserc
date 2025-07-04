@@ -1,5 +1,19 @@
 {
   "projects": {
-    "default": "your-firebase-project-id"
-  }
+    "default": "bstematlas"
+  },
+  "targets": {
+    "bstematlas": {
+      "hosting": {
+        "bstematlas": [
+          "rjwfoundation"
+        ],
+        "rjwfoundation": [
+          "bstematlas"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
